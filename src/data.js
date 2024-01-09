@@ -270,7 +270,7 @@ export const projectsData = [
   // },
 ];
 
-// client project
+// client projects
 export const clientProjects = [
   {
     id: '1',
