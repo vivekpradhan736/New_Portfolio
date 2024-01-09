@@ -84,7 +84,7 @@ const Contact = () => {
                         </div>
                         <input className='input' type="text" placeholder='Subject' required id='subjectField' />
                         <textarea id='msgContent' className='textarea' required placeholder='Your message'></textarea>
-                        <Button title={"Send message"} required onClick={contactFormSubmit} />
+                        {/* <Button title={"Send message"} required onClick={contactFormSubmit} /> */}
                         <button className='btn btn-lg bg-accent hover:bg-accent-hover'  required onClick={contactFormSubmit} >Send message</button>
                     </form>
                 </div>
