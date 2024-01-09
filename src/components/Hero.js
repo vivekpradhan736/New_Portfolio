@@ -10,7 +10,7 @@ import { EarthCanvas } from "./canvas/index";
 import { slideIn } from "../utils/motion";
 
 // import woman image
-import ManImg from "../assets/img/My DP1.png";
+import bgImg from "../assets/img/bgImg.jpg";
 
 const Hero = () => {
   return (
@@ -20,18 +20,16 @@ const Hero = () => {
     items-center lg:bg-cover
     lg:bg-center lg:bg-no-repeat  py-32 lg:py-0 overflow-hidden"
     >
-      <video
+      {/* <video
         src={BgVideo}
         autoPlay
         muted
         loop
         class="video-bg"
         loading="lazy"
-      />
+      /> */}
+      <img src={bgImg} alt="" className="video-bg" />
       <div className="bg-overlay"></div>
-      {/* <div id="stars"></div>
-      <div id="stars2"></div>
-      <div id="stars3"></div> */}
       <div className="container mx-auto h-full">
         <div className="flex items-center h-full pt-8">
           {/* left side */}

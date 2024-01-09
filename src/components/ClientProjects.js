@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 
 // import projects data
-import {projectsData} from '../data'
+import {clientProjects} from '../data'
 
 // import projects nav data
 import {projectsNav} from '../data'
@@ -17,21 +17,15 @@ const ClientProjects = () => {
   useEffect(() => {
     // get projects base on item
     if (item.name === 'all') {
-      setProjects(projectsData)
+      setProjects(clientProjects)
     } else {
-      const newProjects = projectsData.filter(
+      const newProjects = clientProjects.filter(
         (project) => {
           return project.category.toLowerCase() === item.name;
           });
           setProjects(newProjects);
     }
   }, [item]);
-
-  const handleClick = (e, index)=> {
-    setItem({ name: e.target.textContent.toLowerCase()
-    });
-    setActive(index);
-  }
 
 
   return (

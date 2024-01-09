@@ -38,6 +38,11 @@ import Project7 from './assets/img/projects/p7.png';
 import Project8 from './assets/img/projects/p8.png';
 import Project9 from './assets/img/projects/p9.png';
 
+// client projects image
+import ClientProject1 from './assets/img/client-projects/cp1.png';
+import ClientProject2 from './assets/img/client-projects/cp2.png';
+import ClientProject3 from './assets/img/client-projects/cp3.png';
+
 // skills images
 import SkillImg1 from './assets/img/skills/html5.png';
 import SkillImg2 from './assets/img/skills/css3.png';
@@ -149,7 +154,7 @@ export const brands = [
   },
 ];
 
-// projects
+// personal projects
 export const projectsData = [
   {
     id: '1',
@@ -160,7 +165,7 @@ export const projectsData = [
     demoHref: 'https://viveknetflix02.netlify.app/',
     name: 'Netflix - streaming service',
     category: 'web development',
-    technology: '#react.js #html #tailwind css #node.js #redux #firebase #googleAuth',
+    technology: 'react.js html tailwind css node.js redux firebase googleAuth',
     desc: 'Netflix is a Web application platform that allows user to search and streaming movies or web-serices.'
   },
   {
@@ -172,7 +177,7 @@ export const projectsData = [
     demoHref: 'https://youtube-02.netlify.app',
     name: 'YouTube - Video sharing platform',
     category: 'web development',
-    technology: '#html #tailwind css #javascript #react.js #node.js #redux #rapid api #react router',
+    technology: 'html tailwind css javascript react node.js redux rapid api react-router',
     desc: 'YouTube is an online video sharing and social media platform.',
   },
   {
@@ -184,7 +189,7 @@ export const projectsData = [
     demoHref: 'https://dashboard-02.netlify.app/',
     name: 'React Admin Dashboard...',
     category: 'UI/UX design',
-    technology: '#react.js #scss #html javascript #node.js #react-router #material UI #context API',
+    technology: 'react scss html javascript node.js react-router material UI context API',
     desc: 'It is a modern UI/UX admin Dashboard.',
   },
   {
@@ -196,7 +201,7 @@ export const projectsData = [
     demoHref: '',
     name: 'E - Commerce (Cloth Store)',
     category: 'web development',
-    technology: '#html #tailwind css #javascript #react.js #node.js #redux #strapi #stripe #react-router #next-auth',
+    technology: 'html tailwind css javascript react node.js redux strapi stripe react-router next-auth',
     desc: 'A Full-Stack E - Commerce site inspired by amazon/flipkart.',
   },
   // {
@@ -208,7 +213,7 @@ export const projectsData = [
   //   demoHref: 'https://vivekpradhan.vercel.app',
   //   name: 'React - Personal Portfolio',
   //   category: 'UI/UX design',
-  //   technology: '#javascript #react.js #node.js #html #tailwind css #react-router #react-icons #heroicons #framer-motion',
+  //   technology: 'javascript react node.js html tailwind css react-router react-icons heroicons framer-motion',
   //   desc: 'My self coded personal responsive portfolio build with React.js.',
   // },
   // {
@@ -220,7 +225,7 @@ export const projectsData = [
   //   demoHref: '',
   //   name: 'E - Commerce (Nike Store)',
   //   category: 'web development',
-  //   technology: '#html #tailwind css #javascript #react.js #node.js #redux #strapi #stripe #react-router #next-auth',
+  //   technology: 'html tailwind css javascript react node.js redux strapi stripe react-router next-auth',
   //   desc: 'A Full-Stack E - Commerce Shoes Store site inspired by Nike.',
   // },
   {
@@ -234,7 +239,7 @@ export const projectsData = [
     demoHref: 'https://modern-ui-ux-restaurant1.vercel.app/',
     name: 'Restaurant Landing Page',
     category: 'UI/UX design',
-    technology: '#html #css #javascript #react.js #node.js #react-icons',
+    technology: 'html css javascript react node.js react-icons',
     desc: 'A Frontend-React Restaurant Landing Page Site With Figma Design.',
   },
   {
@@ -248,7 +253,7 @@ export const projectsData = [
     figmaHref: 'https://www.figma.com/file/lz9lLpFHMxHm2odnwM3R0z/gpt3?type=design&node-id=0-1&t=Xqe2VESMErin5cCG-0',
     name: 'GPT-3 Landing Page',
     category: 'UI/UX design',
-    technology: '#html #css #javascript #react.js #node.js #react-icons',
+    technology: 'html css javascript react node.js react-icons',
     desc: 'A Frontend-React GPT-3 Landing Page Site With Figma Design.',
   },
   // {
@@ -260,9 +265,40 @@ export const projectsData = [
   //   demoHref: '',
   //   name: 'Movies & Web-Series Picker',
   //   category: 'web development',
-  //   technology: '#html #tailwind css #javascript #next.js #node.js #rapid-api #mongoDB #next-auth',
+  //   technology: 'html tailwind css javascript next.js node.js rapid-api mongoDB next-auth',
   //   desc: "It's a Full-stack Random movie and web-series picker website, inspired by IMDB and Netflix.",
   // },
+];
+
+// client projects
+export const clientProjects = [
+  {
+    id: '1',
+    image: ClientProject1,
+    demo: 'Demo',
+    demoHref: 'https://www.setpoint.io',
+    name: 'Setpoint.io',
+    technology: 'React Vue.js TypeScript Gatsby Tailwind CSS',
+    desc: 'Setpoint is building trust in our credit system. Our platform unlocks speed, efficiency and accuracy for borrowers and lenders.',
+  },
+  {
+    id: '2',
+    image: ClientProject2,
+    demo: 'Demo',
+    demoHref: 'https://bundlee.co.uk',
+    name: 'Bundlee',
+    technology: 'React Vue.js JavaScript Node.js GSAP Tailwind CSS',
+    desc: "Bundlee keeps pace with growing little ones. It is the UK's first rental subscription service for childrenswear.Bundlee gives families a sustainable, space-saving and budget friendly way to access premium clothes.",
+  },
+  {
+    id: '3',
+    image: ClientProject3,
+    demo: 'Demo',
+    demoHref: 'https://www.customtruck.com',
+    name: 'Custom Truck One Source',
+    technology: 'Vue.js Tailwind CSS Bootstrap Animated CSS',
+    desc: 'Enhanced the design of the whole product and make the user experience better. Added multiple new features to the product to make the product more viable.',
+  },
 ];
 
 

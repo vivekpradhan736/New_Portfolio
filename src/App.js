@@ -12,7 +12,6 @@ import Footer from './components/Footer';
 import BackToTopBtn from './components/BackToTopBtn';
 import Experience from './components/Experience';
 
-
 const App = () => {
   return <div>
     <Header />

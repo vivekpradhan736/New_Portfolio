@@ -1,3 +1,6 @@
+.myPic {
+    filter: drop-shadow(5px 5px 10px rgb(88, 105, 97));
+}
 .vivek{
     background: transparent;
     height: 50px;

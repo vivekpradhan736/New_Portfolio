@@ -3,8 +3,14 @@ import firebase from './FirebaseConfig'
 
 // import contact data
 import { contact } from '../data'
+import Button from './Button';
 
 const Contact = () => {
+    // const isValid = 
+    //     document.getElementById("nameField").value.length > 0 &&
+    //     document.getElementById("emailField").value.length > 0 &&
+    //     document.getElementById("subjectField").value.length > 0 &&
+    //     document.getElementById("msgContent").value.length > 0;
 
     // Create the database in the firebase database
     const contactForm = firebase.database().ref("contactMessages");
@@ -78,7 +84,8 @@ const Contact = () => {
                         </div>
                         <input className='input' type="text" placeholder='Subject' required id='subjectField' />
                         <textarea id='msgContent' className='textarea' required placeholder='Your message'></textarea>
-                        <button className='btn btn-lg bg-accent hover:bg-accent-hover' required onClick={contactFormSubmit}>Send message</button>
+                        <Button title={"Send message"} required onClick={contactFormSubmit} />
+                        <button className='btn btn-lg bg-accent hover:bg-accent-hover'  required onClick={contactFormSubmit} >Send message</button>
                     </form>
                 </div>
             </div>
