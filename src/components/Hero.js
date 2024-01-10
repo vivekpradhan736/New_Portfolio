@@ -1,13 +1,12 @@
 import React from "react";
-import Typical from "react-typical";
+// import Typical from "react-typical";
 import Socials from "../components/Socials";
 import "./Hero.css";
-import BgVideo from "../assets/video.mp4";
 
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { EarthCanvas } from "./canvas/index";
-import { slideIn } from "../utils/motion";
+// import { EarthCanvas } from "./canvas/index";
+// import { slideIn } from "../utils/motion";
 
 // import woman image
 import bgImg from "../assets/img/bgImg.jpg";
@@ -25,11 +24,10 @@ const Hero = () => {
         autoPlay
         muted
         loop
-        class="video-bg"
+        className="video-bg"
         loading="lazy"
       /> */}
       <img src={bgImg} alt="" className="video-bg" />
-      <div className="bg-overlay"></div>
       <div className="container mx-auto h-full">
         <div className="flex items-center h-full pt-8">
           {/* left side */}
@@ -41,9 +39,9 @@ const Hero = () => {
               I Build & Design <br /> Web Interfaces.
             </h1>
             <div className="font-mono mb-[22px] text-xl flex space-x-3 md:text-2xl lg:text-2xl ">
-              <h4> I Am Into </h4>
+              <h4> I Am Into <span className="text-red-500"> Full-Stack Developement </span> </h4>
               {/* Text to Animate */}
-              <strong className="text-red-600 px-1">
+              {/* <strong className="text-red-600 px-1">
                 <Typical
                   steps={[
                     "Frontend Development.",
@@ -62,14 +60,14 @@ const Hero = () => {
                   wrapper="p"
                   loop={Infinity}
                 />
-              </strong>
+              </strong> */}
             </div>
             {/* <button id='vivek' className='btn btn-md bg-accent hover:bg-accent-hover md:btn-lg transition-all'><a href="#contact">Work with me</a></button> */}
             {/* Socials */}
             <div className="lg:block py-5">
               <Socials />
             </div>
-            <div class="wrapper">
+            <div className="wrapper">
               <a id="hello" href="#contact">
                 <span></span>
                 <span></span>
@@ -80,15 +78,14 @@ const Hero = () => {
             </div>
           </div>
           {/* right side */}
-          <div className="hidden lg:flex flex-1 justify-end items-end ">
+          {/* <div className="hidden lg:flex flex-1 justify-end items-end ">
           <motion.div
             variants={slideIn("right", "tween", 0.2, 1)}
             className="xl:flex-1 md:h-[550px] h-[350px]"
           >
             <EarthCanvas />
           </motion.div>
-            {/* <img src={ManImg} alt="" /> */}
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
