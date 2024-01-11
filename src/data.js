@@ -401,7 +401,7 @@ export const experience = [
   {
     experienceImg: ExperienceImage1,
     experienceText:'Freelance Web Developer',
-    experienceTime: 'March 2022 - Present : 1 year 2 months',
+    experienceTime: 'March 2022 - Present : 2 years',
     experienceTitle: "I have been working as a Freelance Web Developer for over than a year. I have worked on various projects ranging from E-Commerce Stores to Social Media, Personal Websites to Landing Pages. I have worked with clients from all over the world and have always delivered the best possible results. Meeting my Client's requirements is one of the most important aspects of my job.",
   },
   {
