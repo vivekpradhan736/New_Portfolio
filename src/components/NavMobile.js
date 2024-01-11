@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import three_line  from "../assets/img/three-line.png"
+import cross  from "../assets/img/cross.png"
 
 // import navigation data
 import { navigation } from '../data';
@@ -50,7 +52,7 @@ const NavMobile = () => {
     <nav className='relative'>
       {/* menu icon */}
       <div onClick={() => setIsOpen(true)} className='cursor-pointer text-white'>
-      <img src={"/src/assets/img/three-line.png"} alt="" className='w-8 h-8' />
+      <img src={three_line} alt="" className='w-8 h-8' />
         {/* <MenuAlt3Icon className='w-8 h-8' /> */}
       </div>
 
@@ -62,7 +64,7 @@ const NavMobile = () => {
       <motion.ul variants={ulVariants} initial='hidden' animate={isOpen ? 'visible' : ''} className={`${isOpen ? 'right-0' : '-right-full'} fixed top-0 bottom-0 w-full flex flex-col justify-center items-center transition-all duration-300 overflow-hidden`}>
         {/* close icon */}
         <div onClick={() => setIsOpen(false)} className='cursor-pointer absolute top-8 right-8'>
-        <img src={"/src/assets/img/cross.png"} alt="" />
+        <img src={cross} alt="" />
           {/* <XIcon className='w-8 h-8' /> */}
         </div>
         {
