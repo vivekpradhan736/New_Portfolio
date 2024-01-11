@@ -3,7 +3,7 @@
     z-index: 101;
     right: 10%;
     top: 15%;
-    display: none;
+    display: flex;
     height: 40px;
     background: #162619;
     border-radius: 10px;

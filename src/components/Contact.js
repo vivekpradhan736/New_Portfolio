@@ -3,35 +3,36 @@ import firebase from './FirebaseConfig'
 
 // import contact data
 import { contact } from '../data'
-import Button from './Button';
+import { useState } from 'react';
+import { toast } from "react-toastify";
 
 const Contact = () => {
-    // const isValid = 
-    //     document.getElementById("nameField").value.length > 0 &&
-    //     document.getElementById("emailField").value.length > 0 &&
-    //     document.getElementById("subjectField").value.length > 0 &&
-    //     document.getElementById("msgContent").value.length > 0;
+    const initialFormState = {
+        name: "",
+        email: "",
+        subject: "",
+        msg: "",
+      };
+    const [personalData, setPersonalData] = useState(initialFormState);
+
+      const handleInputs = (e) => {
+        const name = e.target.name;
+        const value = e.target.value;
+        setPersonalData({ ...personalData, [name]: value });
+      };
+
+      const isFormValid = personalData.name !== "" && personalData.email !== "" && personalData.subject !== "" && personalData.msg !== ""; 
 
     // Create the database in the firebase database
     const contactForm = firebase.database().ref("contactMessages");
 
-    const contactFormSubmit = () => {
-        var name = getElementVal("nameField");
-        var email = getElementVal("emailField");
-        var subject = getElementVal("subjectField");
-        var msg = getElementVal("msgContent");
+    const contactFormSubmit = (e) => {
+        e.preventDefault();
+        saveMessages(personalData.name, personalData.email, personalData.subject, personalData.msg);
 
-        saveMessages(name, email, subject, msg);
+        setPersonalData(initialFormState)
 
-        resetForm("contact_form");
-
-        // Display Alert
-        document.querySelector(".Alert").classList.add("moveIn");
-        document.querySelector(".Alert").style.display = "flex";
-
-        setTimeout(() => {
-            document.querySelector(".Alert").style.display = "none";
-          }, 4000);
+        toast.success("Your message sent successfully");
     }
 
     const saveMessages = (name, email, subject, msg) => {
@@ -42,14 +43,6 @@ const Contact = () => {
             subject: subject,
             msg: msg,
         })
-    }
-
-    const resetForm = (id) => {
-        document.getElementById(id).reset();
-      };
-
-    const getElementVal = (id) => {
-        return document.getElementById(id).value;
     }
 
     return (
@@ -79,13 +72,12 @@ const Contact = () => {
                     {/* form */}
                     <form id='contact_form' className='space-y-8 w-full max-w-[780px]' onSubmit={(e) => e.preventDefault()}>
                         <div className="flex gap-8">
-                            <input className='input' type="text" placeholder='Your name' required id='nameField' />
-                            <input className='input' type="email" placeholder='Your email' required id='emailField' />
+                            <input className='input' type="text" name="name" placeholder='Your name *' value={personalData.name} onChange={handleInputs} required id='name' />
+                            <input className='input' type="email" name="email" placeholder='Your email *' required id='email' value={personalData.email} onChange={handleInputs} />
                         </div>
-                        <input className='input' type="text" placeholder='Subject' required id='subjectField' />
-                        <textarea id='msgContent' className='textarea' required placeholder='Your message'></textarea>
-                        {/* <Button title={"Send message"} required onClick={contactFormSubmit} /> */}
-                        <button className='btn btn-lg bg-accent hover:bg-accent-hover'  required onClick={contactFormSubmit} >Send message</button>
+                        <input className='input' type="text" name="subject" placeholder='Subject *' required id='subject' value={personalData.subject} onChange={handleInputs} />
+                        <textarea id='msg' name="msg" className='textarea' required placeholder='Your message *' value={personalData.msg} onChange={handleInputs}></textarea>
+                        <button className={`py-4 px-7 font-medium text-${!isFormValid ? "gray-200" : "white"} flex items-center justify-center rounded-sm  transition-all; btn-lg bg-${!isFormValid ? "secondary" : "accent"} hover:bg-${isFormValid && "accent"} `} disabled={!isFormValid}  required onClick={contactFormSubmit} >Send message</button>
                     </form>
                 </div>
             </div>

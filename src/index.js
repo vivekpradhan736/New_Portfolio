@@ -2,16 +2,14 @@ import React from 'react';
 // import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { Alert } from './components/Alert';
 import ReactDOM from "react-dom/client";
-
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <App />
-//     <Alert />
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
-root.render(<App />);
+root.render(
+  <>
+    <App />
+    <ToastContainer />
+  </>
+);
