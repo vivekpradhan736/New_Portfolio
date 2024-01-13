@@ -2,6 +2,8 @@ import React from "react";
 // import Typical from "react-typical";
 import Socials from "../components/Socials";
 import "./Hero.css";
+import resume from "../assets/img/Resume.pdf"
+import file from "../assets/img/file.png"
 
 import { motion } from "framer-motion";
 import { styles } from "../styles";
@@ -64,8 +66,8 @@ const Hero = () => {
             </div>
             {/* <button id='vivek' className='btn btn-md bg-accent hover:bg-accent-hover md:btn-lg transition-all'><a href="#contact">Work with me</a></button> */}
             {/* Socials */}
-            <div className="lg:block py-5">
-              <Socials />
+            <div className="lg:block py-3 pb-8">
+              <a href={resume} className="bg-[#F06A95] hover:bg-[#c7794c] duration-200 text-white py-2 px-4 rounded-full ">Download Offline Resume <img src={file} alt="" className="inline w-5"/></a>
             </div>
             <div className="wrapper">
               <a id="hello" href="#contact">
