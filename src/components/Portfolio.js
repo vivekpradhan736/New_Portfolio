@@ -14,13 +14,13 @@ const Portfolio = () => {
             </div>
             <Projects />
         </div>
-        <div className="container mx-auto pt-20">
+        {/* <div className="container mx-auto pt-20">
             <div className="flex flex-col items-center text-center">
                 <h2 className='section-title relative before:absolute before:opacity-40 before:-top-[2rem] before:-left-3/4 before:hidden before:lg:block'>Clients work</h2>
                 <p className='subtitle text-sky-300'>I also work various different clients projects to fit different aspects of the client's business. If you want to see more examples of my clients work than the ones showcased in this site, please <a href="#contact" className='text-orange-500'>contact me!</a> </p>
             </div>
             <ClientProjects />
-        </div>
+        </div> */}
     </section>
   )
 }
