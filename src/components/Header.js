@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import Nav from '../components/Nav'
 import NavMobile from '../components/NavMobile'
 import Socials from '../components/Socials'
+import { motion } from 'framer-motion'
+import { styles } from '../styles'
 
 const Header = () => {
     const [bg, setBg] = useState(false);
@@ -13,13 +15,17 @@ const Header = () => {
         })
     })
     return (
-        <header className={`${bg ? 'bg-slate-900 h-20' : 'h-24'
+        <motion.header
+            style={styles}
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.9, duration: 0.01 }} className={`${bg ? 'bg-slate-900 h-20' : 'h-24'
             } flex items-center fixed top-0 w-full
         text-white z-10 transition-all duration-300`}>
             <div className="container mx-auto h-full flex items-center justify-between">
             <button onClick={() => setIsPlaying(!isPlaying)}>
                 {/* logo */}
-                <a href="#" className='text-4xl font-headername'>
+                <a href="/#" className='text-4xl font-headername'>
                     Vivek
                 </a>
                 </button>
@@ -36,7 +42,7 @@ const Header = () => {
                     <NavMobile />
                 </div>
                 </div>
-        </header>
+        </motion.header>
     )
 }
 

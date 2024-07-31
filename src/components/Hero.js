@@ -12,6 +12,7 @@ import { styles } from "../styles";
 
 // import woman image
 import bgImg from "../assets/img/bgImg.jpg";
+import myPic from "../assets/img/mypic.png";
 
 const Hero = () => {
   return (
@@ -33,6 +34,12 @@ const Hero = () => {
       <div className="container mx-auto h-full">
         <div className="flex items-center h-full pt-8">
           {/* left side */}
+          <motion.div
+            style={styles}
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.5, duration: 1 }} 
+          >
           <div className="flex-1 flex flex-col items-center lg:items-start">
             <p className="text-3xl text-accent mb-[22px]">
               Hey There, I'm Vivek 👋
@@ -79,15 +86,19 @@ const Hero = () => {
               </a>
             </div>
           </div>
-          {/* right side */}
-          {/* <div className="hidden lg:flex flex-1 justify-end items-end ">
-          <motion.div
-            variants={slideIn("right", "tween", 0.2, 1)}
-            className="xl:flex-1 md:h-[550px] h-[350px]"
-          >
-            <EarthCanvas />
           </motion.div>
-          </div> */}
+          {/* right side */}
+          <div className="hidden lg:flex flex-1 justify-end items-end ">
+            <motion.img
+              src={myPic}
+              alt="pic"
+              className="w-[300px] h-[300px] rounded-full"
+              style={styles}
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.5, duration: 1 }}
+            />
+          </div>
         </div>
       </div>
     </section>
